@@ -1,0 +1,21 @@
+:root {
+    --mainBg: salmon;
+}
+
+$body-color: #09c;
+$text-color: #777;
+
+body {
+    background-color: $body-color;
+
+}
+.container {
+    padding: 1rem;
+    display: flex;
+    background: linear-gradient(to top, black, white);
+
+    h1{
+        background-color: var(--mainBg);
+        color: $text-color;
+    }
+}

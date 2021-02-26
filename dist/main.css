@@ -1,0 +1,23 @@
+:root {
+  --mainBg: salmon;
+}
+
+body {
+  background-color: #09c;
+}
+
+.container {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), to(white));
+  background: linear-gradient(to top, black, white);
+}
+.container h1 {
+  background-color: salmon;
+  background-color: var(--mainBg);
+  color: #777;
+}
+
+/*# sourceMappingURL=main.css.map*/
