@@ -1,0 +1,81 @@
+$header-color: #17191C;
+$hover-color: #49C5B6;
+
+
+
+.header {
+    background: $header-color;
+    color: #fff;
+
+}
+.header__logo{
+    margin-right: 64px;
+}
+.header__wrapper {
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__left{
+    display: flex;
+
+}
+.header__right{
+    display: flex;
+}
+
+.header__left__nav, .header__right__nav{
+    display: flex;
+    align-items: center;
+    margin-right: 64px;
+
+}
+.header__left__item a, .header__right__item a{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 36px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px 0;
+}
+
+.header__left__nav a:hover, .header__right__nav a:hover {
+    color: $hover-color;
+    border-bottom: 4px solid $hover-color;
+}
+
+.header__account{
+    display: flex;
+}
+
+.login__btn a{
+    color: #fff;
+    margin-right: 36px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+.login__btn a:hover {
+    background-color: $hover-color;
+    border: 1px solid $hover-color;
+}
+
+.header__lang{
+    display: flex;
+    .header__lang-icon{
+        margin-right: 8px;
+    }
+    .header__lang-value{
+        text-transform: uppercase;
+        margin-right: 13px;
+    }
+    .header__lang-arrow{
+        cursor: pointer;
+    }
+}
+
+

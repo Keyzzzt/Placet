@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import "reset.scss";
+@import "header.scss";
+@import "news.scss";
+
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #8B959E;
+}
+
+
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+
+}
