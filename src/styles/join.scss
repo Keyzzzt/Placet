@@ -1,20 +1,16 @@
-$join-bg: #00D1CD;
-$btn-bg: #17191C;
-
-
+@import '../styles/variables';
 
 .join{
     margin-top: 48px;
     padding: 24px;
     height: 266px;
-    background-color: $join-bg;
+    background-color: $main-green;
     text-align: center;
-    color:#fff;
+    color: $white;
     &-title{
         margin-top: 24px;
         font-weight: normal;
         font-size: 32px;
-
         span{
             font-weight: 700;
         }
@@ -24,9 +20,9 @@ $btn-bg: #17191C;
     }
     &-btn {
         a{
-            color: #fff;
+            color: $white;
             text-decoration: none;
-            background-color: #17191C;
+            background-color: $main-dark;
             border-radius: 4px;
             padding: 11px 24px;
             font-size: 14px;

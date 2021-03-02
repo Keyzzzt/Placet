@@ -1,7 +1,4 @@
-$news-title-color: #17191C;
-$news-date-color: #8B959E;
-$news-text-color: #8B959E;
-$news-btn-color: #49C5B6;
+@import '../styles/variables';
 
 .news__header__logo {
     width: 400px;
@@ -19,7 +16,7 @@ $news-btn-color: #49C5B6;
 .news__content-row{
     display: flex;
     flex-wrap: wrap;
-    div:nth-last-child(1){
+    div:nth-child(4n + 0){
         margin-right: 0;
     }
 }
@@ -27,7 +24,7 @@ $news-btn-color: #49C5B6;
 .news__item{
     max-width: 255px;
     min-width: 382px;
-    box-shadow: 0px 12px 36px #EDF2F1;
+    box-shadow: 0px 12px 24px $news-card-shadow;
     border-radius: 4px;
     margin: 0 24px 24px 0;
 
@@ -45,7 +42,7 @@ $news-btn-color: #49C5B6;
     }
     &-title{
         font-size: 24px;
-        color: $news-title-color;
+        color: $main-dark;
         margin-bottom: 13px;
     }
     &-date{
@@ -55,13 +52,21 @@ $news-btn-color: #49C5B6;
         margin-bottom: 25px;
         font-weight: 500;
         font-size: 16px;
-        color: $news-text-color;
+        color: $main-grey;
     }
     &-btn{
         a {
-            color: $news-btn-color;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            color: $news-block-green;
             font-weight: 500;
-            font-size: 16px;
+            img{ 
+                height: 12px;
+                width: 14px;
+                margin-left: 13px;
+            }
+
         }
     }
 }
@@ -72,12 +77,12 @@ $news-btn-color: #49C5B6;
     margin: 24px;
     a{
         text-decoration: none;
-        color: $news-btn-color;
+        color: $news-block-green;
         text-transform: uppercase;
         font-weight: 700;
         font-size: 14px;
         line-height: 16.8px;
-        border: 1px solid $news-btn-color;
+        border: 1px solid $news-block-green;
         border-radius: 4px;
         padding: 11.5px 24px;
     }

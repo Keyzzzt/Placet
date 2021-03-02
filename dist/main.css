@@ -90,8 +90,8 @@ table {
 }
 
 .header__left__nav a:hover, .header__right__nav a:hover {
-  color: #49C5B6;
-  border-bottom: 4px solid #49C5B6;
+  color: #00D1CD;
+  border-bottom: 4px solid #00D1CD;
 }
 
 .header__account {
@@ -109,22 +109,13 @@ table {
 }
 
 .login__btn a:hover {
-  background-color: #49C5B6;
-  border: 1px solid #49C5B6;
+  background-color: #00D1CD;
+  border: 1px solid #00D1CD;
 }
 
-.header__lang {
-  display: flex;
-}
-.header__lang .header__lang-icon {
-  margin-right: 8px;
-}
-.header__lang .header__lang-value {
-  text-transform: uppercase;
-  margin-right: 13px;
-}
-.header__lang .header__lang-arrow {
-  cursor: pointer;
+.header__right__btn--active {
+  color: #00D1CD !important;
+  border-bottom: 4px solid #00D1CD;
 }
 
 .news__header__logo {
@@ -144,14 +135,14 @@ table {
   display: flex;
   flex-wrap: wrap;
 }
-.news__content-row div:nth-last-child(1) {
+.news__content-row div:nth-child(4n+0) {
   margin-right: 0;
 }
 
 .news__item {
   max-width: 255px;
   min-width: 382px;
-  box-shadow: 0px 12px 36px #EDF2F1;
+  box-shadow: 0px 12px 24px #EDF2F1;
   border-radius: 4px;
   margin: 0 24px 24px 0;
 }
@@ -178,9 +169,16 @@ table {
   color: #8B959E;
 }
 .news__item-btn a {
+  height: 20px;
+  display: flex;
+  align-items: center;
   color: #49C5B6;
   font-weight: 500;
-  font-size: 16px;
+}
+.news__item-btn a img {
+  height: 12px;
+  width: 14px;
+  margin-left: 13px;
 }
 
 .news__load-more {
@@ -233,45 +231,64 @@ table {
 .footer {
   margin-top: 48px;
 }
-
-.footer__nav {
+.footer-up {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-nav {
   display: flex;
 }
-.footer__nav div {
+.footer-nav div {
   margin-right: 72px;
 }
-.footer__nav h3 {
+.footer-nav h3 {
   font-size: 20px;
   color: #17191C;
   font-weight: 700;
   line-height: 28px;
 }
-.footer__nav ul {
+.footer-nav ul {
   margin-top: 24px;
 }
-.footer__nav li {
+.footer-nav li {
   font-weight: 500;
   font-size: 16px;
   line-height: 22.4px;
   margin-top: 12px;
 }
-
 .footer-apple-google-btn {
-  margin-top: 48px;
-}
-
-.footer__social-icons {
+  margin: 48px 0;
   display: flex;
 }
-.footer__social-icons div {
+.footer-apple-google-btn .apple, .footer-apple-google-btn .google {
+  margin-right: 16px;
+}
+.footer-social-icons {
+  display: flex;
+}
+.footer-social-icons div {
   height: 40px;
   width: 40px;
-  border-radius: 50%;
+  border-radius: 100%;
   background-color: #F7F8F9;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 24px 16px 0 0;
+}
+.footer-rights {
+  width: 1465px;
+}
+.footer-rights p {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.footer-cards {
+  margin: 48px 0 56px;
+  display: flex;
+}
+.footer-cards div {
+  margin-right: 16px;
 }
 
 *, *:before, *:after {
@@ -296,6 +313,118 @@ a {
 .container {
   max-width: 1600px;
   margin: 0 auto;
+}
+
+.lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+.lang-icon {
+  margin-right: 8px;
+}
+.lang-value {
+  text-transform: uppercase;
+  margin-right: 13px;
+}
+.lang-triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 6px solid #fff;
+  margin-top: 5px;
+}
+.lang-triangle-down--dark {
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 6px solid #17191C;
+  margin-top: 5px;
+}
+.lang-dark {
+  color: #17191C;
+}
+
+@media only screen and (max-width: 1920px) {
+  .footer-rights {
+    max-width: 1171px;
+  }
+
+  .container {
+    max-width: 1281px;
+  }
+  .container .news__content-row div:nth-child(3n+0) {
+    margin-right: 0;
+  }
+  .container .news__content-row div:nth-child(4n+0) {
+    margin-right: 24px;
+  }
+  .container .news__item {
+    max-width: 411px;
+    min-width: 411px;
+  }
+  .container .news__item-image img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1442px) {
+  .footer-rights {
+    max-width: 864px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .footer__up, .footer__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .footer__social {
+    position: relative;
+  }
+
+  .footer__social-icons {
+    position: absolute;
+    top: 0;
+    left: 584px;
+  }
+
+  .footer__individuals ul, .footer__business ul, .footer__company ul, .footer__social h3 {
+    margin-top: 28px;
+    display: none;
+  }
+
+  .lang {
+    padding: 34px;
+    border-top: 1px solid #8B959E;
+    border-bottom: 1px solid #8B959E;
+  }
+
+  .footer-rights {
+    max-width: 864px;
+  }
+}
+@media only screen and (max-width: 748px) {
+  body {
+    background-color: red;
+  }
+}
+@media only screen and (max-width: 520px) {
+  body {
+    background-color: red;
+  }
+}
+@media only screen and (max-width: 360px) {
+  body {
+    background-color: red;
+  }
 }
 
 /*# sourceMappingURL=main.css.map*/

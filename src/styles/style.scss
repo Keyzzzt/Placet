@@ -1,32 +1,147 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import '../styles/variables.scss';
 @import "reset.scss";
 @import "header.scss";
 @import "news.scss";
 @import "join.scss";
 @import "footer.scss";
 
+
+
+@mixin roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+
 *, *:before, *:after{
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    @include roboto;
     font-style: normal;
     font-size: 16px;
     line-height: 1.2;
     font-weight: 500;
-    color: #8B959E; 
+    color: $main-grey; 
 }
 
 a {
     text-decoration: none;
-    color: #8B959E; 
+    color: $main-grey; 
 }
-
-
 
 .container {
     max-width: 1600px;
     margin: 0 auto;
-
 }
+
+.lang{
+    display: flex;
+    cursor: pointer;
+    &-icon{
+        margin-right: 8px;
+    }
+    &-value{
+        text-transform: uppercase;
+        margin-right: 13px;
+    }
+    &-triangle-down{
+        width: 0;
+        height: 0;
+        border-left:  3px solid transparent;
+        border-right: 3px solid transparent;
+        border-top: 6px solid $white;
+        margin-top: 5px;
+    }
+    &-triangle-down--dark{
+        width: 0;
+        height: 0;
+        border-left:  3px solid transparent;
+        border-right: 3px solid transparent;
+        border-top: 6px solid $main-dark;
+        margin-top: 5px;
+
+    }
+    &-dark{
+        color: $main-dark;
+    }
+}
+
+
+@media only screen and (max-width: 1920px) {
+    .footer-rights{
+        max-width: 1171px;
+    }
+        .container {
+            max-width: 1281px; 
+            .news__content-row{
+                div:nth-child(3n + 0){
+                    margin-right: 0;
+                }
+                div:nth-child(4n + 0){
+                    margin-right: 24px;
+                }
+            }
+            .news__item{
+                max-width: 411px;
+                min-width: 411px;
+                &-image{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+
+        }       
+    }
+@media only screen and (max-width: 1442px) {
+    .footer-rights{
+        max-width: 864px;
+    }
+
+    }
+
+@media only screen and (max-width: 1024px) {
+    .footer__up, .footer__nav {
+        display: flex;
+        flex-direction: column;
+}
+    .footer__social{
+    position: relative;
+}
+    .footer__social-icons{
+    position: absolute;
+    top: 0;
+    left: 584px;
+}
+
+    .footer__individuals ul, .footer__business ul, .footer__company ul, .footer__social h3{
+    margin-top: 28px;
+    display: none;
+}
+    .lang {
+    padding: 34px;
+    border-top: 1px solid $main-grey;
+    border-bottom: 1px solid $main-grey;
+}
+.footer-rights{
+    max-width: 864px;
+}
+}
+
+@media only screen and (max-width: 748px) {
+    body {
+      background-color: red;
+    }
+  }
+@media only screen and (max-width: 520px) {
+    body {
+      background-color: red;
+    }
+  }
+@media only screen and (max-width: 360px) {
+    body {
+      background-color: red;
+    }
+  }

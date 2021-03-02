@@ -1,11 +1,9 @@
-$header-color: #17191C;
-$hover-color: #49C5B6;
-
+@import '../styles/variables';
 
 
 .header {
-    background: $header-color;
-    color: #fff;
+    background: $main-dark;
+    color: $white;
 
 }
 .header__logo{
@@ -32,7 +30,7 @@ $hover-color: #49C5B6;
 
 }
 .header__left__item a, .header__right__item a{
-    color: #fff;
+    color: $white;
     font-size: 14px;
     font-weight: 700;
     margin-right: 36px;
@@ -41,41 +39,31 @@ $hover-color: #49C5B6;
     padding: 19px 0;
 }
 
-.header__left__nav a:hover, .header__right__nav a:hover {
-    color: $hover-color;
-    border-bottom: 4px solid $hover-color;
+.header__left__nav a:hover, .header__right__nav a:hover{
+    color: $main-green;
+    border-bottom: 4px solid $main-green;
 }
+
 
 .header__account{
     display: flex;
 }
 
 .login__btn a{
-    color: #fff;
+    color: $white;
     margin-right: 36px;
     text-transform: uppercase;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 1px solid $white;
     border-radius: 5px;
     padding: 10px;
 }
 .login__btn a:hover {
-    background-color: $hover-color;
-    border: 1px solid $hover-color;
+    background-color: $main-green;
+    border: 1px solid $main-green;
 }
 
-.header__lang{
-    display: flex;
-    .header__lang-icon{
-        margin-right: 8px;
-    }
-    .header__lang-value{
-        text-transform: uppercase;
-        margin-right: 13px;
-    }
-    .header__lang-arrow{
-        cursor: pointer;
-    }
+.header__right__btn--active{
+    color: $main-green !important;
+    border-bottom: 4px solid $main-green;
 }
-
-

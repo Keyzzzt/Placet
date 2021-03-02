@@ -1,46 +1,70 @@
-$title: #17191C;
-$social-bg: #F7F8F9;
+@import '../styles/variables';
 
 .footer{
     margin-top: 48px;
-}
-.footer__nav{
-    display: flex;
-    div{
-        margin-right: 72px;
-    }
-    h3{
-        font-size: 20px;
-        color: $title;
-        font-weight: 700;
-        line-height: 28px;
-
-    }
-    ul{
-        margin-top: 24px;
-    }
-    li{
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 22.4px;
-        margin-top: 12px;
-    }
-}
-
-.footer-apple-google-btn{
-    margin-top: 48px;
-}
-
-.footer__social-icons{
-    display: flex; 
-    div {
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
-        background-color: $social-bg;
+    &-up{
         display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 24px 16px 0 0;
+        justify-content: space-between;
+    }
+    &-nav{
+        display: flex;
+        div{
+            margin-right: 72px;
+        }
+        h3{
+            font-size: 20px;
+            color: $main-dark;
+            font-weight: 700;
+            line-height: 28px;
+    
+        }
+        ul{
+            margin-top: 24px;
+        }
+        li{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22.4px;
+            margin-top: 12px;
+        }
+    }
+    &-apple-google-btn{
+        margin: 48px 0;
+        display: flex;
+        .apple, .google{
+            margin-right: 16px;
+        }
+    }
+    &-social-icons{
+        display: flex; 
+        div {
+            
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            background-color: $social-bg;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 24px 16px 0 0;
+        }
+    }
+    &-rights{
+        width: 1465px;
+        p {
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+    }
+    &-cards {
+        margin: 48px 0 56px;
+        display: flex;
+        div {
+            margin-right: 16px;
+        }
     }
 }
+
+
+
+
