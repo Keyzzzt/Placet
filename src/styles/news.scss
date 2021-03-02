@@ -1,3 +1,8 @@
+$news-title-color: #17191C;
+$news-date-color: #8B959E;
+$news-text-color: #8B959E;
+$news-btn-color: #49C5B6;
+
 .news__header__logo {
     width: 400px;
     margin: 48px auto;
@@ -9,7 +14,71 @@
     h1{
         font-size: 20px;
         font-weight: 700;
-
     }
+}
+.news__content-row{
+    display: flex;
+    flex-wrap: wrap;
+    div:nth-last-child(1){
+        margin-right: 0;
+    }
+}
 
+.news__item{
+    max-width: 255px;
+    min-width: 382px;
+    box-shadow: 0px 12px 36px #EDF2F1;
+    border-radius: 4px;
+    margin: 0 24px 24px 0;
+
+    &-bottom{
+        padding: 0 24px 24px 24px;
+    }
+    &-image{
+
+        img {
+        margin-bottom: 24px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+
+        }
+    }
+    &-title{
+        font-size: 24px;
+        color: $news-title-color;
+        margin-bottom: 13px;
+    }
+    &-date{
+        margin-bottom: 25px;
+    }
+    &-text{
+        margin-bottom: 25px;
+        font-weight: 500;
+        font-size: 16px;
+        color: $news-text-color;
+    }
+    &-btn{
+        a {
+            color: $news-btn-color;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+}
+
+.news__load-more {
+    display: flex;
+    justify-content: center;
+    margin: 24px;
+    a{
+        text-decoration: none;
+        color: $news-btn-color;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16.8px;
+        border: 1px solid $news-btn-color;
+        border-radius: 4px;
+        padding: 11.5px 24px;
+    }
 }

@@ -1,0 +1,37 @@
+$join-bg: #00D1CD;
+$btn-bg: #17191C;
+
+
+
+.join{
+    margin-top: 48px;
+    padding: 24px;
+    height: 266px;
+    background-color: $join-bg;
+    text-align: center;
+    color:#fff;
+    &-title{
+        margin-top: 24px;
+        font-weight: normal;
+        font-size: 32px;
+
+        span{
+            font-weight: 700;
+        }
+    }
+    &-text{
+        margin: 16px 0 48px 0;
+    }
+    &-btn {
+        a{
+            color: #fff;
+            text-decoration: none;
+            background-color: #17191C;
+            border-radius: 4px;
+            padding: 11px 24px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+$title: #17191C;
+$social-bg: #F7F8F9;
+
+.footer{
+    margin-top: 48px;
+}
+.footer__nav{
+    display: flex;
+    div{
+        margin-right: 72px;
+    }
+    h3{
+        font-size: 20px;
+        color: $title;
+        font-weight: 700;
+        line-height: 28px;
+
+    }
+    ul{
+        margin-top: 24px;
+    }
+    li{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22.4px;
+        margin-top: 12px;
+    }
+}
+
+.footer-apple-google-btn{
+    margin-top: 48px;
+}
+
+.footer__social-icons{
+    display: flex; 
+    div {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: $social-bg;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 24px 16px 0 0;
+    }
+}

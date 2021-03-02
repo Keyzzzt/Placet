@@ -2,6 +2,8 @@
 @import "reset.scss";
 @import "header.scss";
 @import "news.scss";
+@import "join.scss";
+@import "footer.scss";
 
 *, *:before, *:after{
     box-sizing: border-box;
@@ -13,7 +15,12 @@ body {
     font-size: 16px;
     line-height: 1.2;
     font-weight: 500;
-    color: #8B959E;
+    color: #8B959E; 
+}
+
+a {
+    text-decoration: none;
+    color: #8B959E; 
 }
 
 
