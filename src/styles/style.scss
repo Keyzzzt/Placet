@@ -19,24 +19,29 @@
 
 body {
     @include roboto;
-    font-style: normal;
+    padding: 0 24px;
     font-size: 16px;
     line-height: 1.2;
     font-weight: 500;
     color: $main-grey; 
+
+}
     .container {
         max-width: 1600px;
         margin: 0 auto;
-    
+
         @include breakpoint(xl){
             max-width: 1281px;
-            margin: 0 auto;
         }
         @include breakpoint(lg){
             max-width: 864px;
-            margin: 0 auto;
         }
-    }
+        @include breakpoint(md){
+            max-width: 724px;
+        }
+        @include breakpoint(sm){
+            max-width: 472px;
+        } 
     }
 
 

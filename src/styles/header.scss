@@ -4,9 +4,11 @@
 .header {
     background: $main-dark;
     color: $white;
+    margin: 0 -24px;
     &-burger{
         position: relative;
         display: none;
+        cursor: pointer;
         @include breakpoint(lg){
             display: block;
         }
@@ -85,6 +87,9 @@
             :nth-last-child(2){
                 margin-right: 50px;
             }
+        }
+        @include breakpoint(md){
+            display: none;
         }
     }
 }

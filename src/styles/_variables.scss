@@ -15,7 +15,7 @@ $social-bg: #F7F8F9;
         @media(max-width: 1440px){@content;}
     }
     @else if $point == md{
-        @media(max-width: 748px){@content;}
+        @media(max-width: 980px){@content;}
     }
     @else if $point == sm{
         @media(max-width: 520px){@content;}
