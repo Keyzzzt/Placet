@@ -10,15 +10,15 @@
 </head>
 
 <body>
-
     <!-- header  -->
     <header class="header">
         <div class="container">
             <div class="header__wrapper">
                 <div class="header__left">
                     <div class="header__logo">
-                        <a href="#" class="header__logo-link">
-                            <img src="../src/img/logo.png" alt="logo" class="header__logo-img"></a>
+                        <a href="#">
+                            <img src="../src/img/logo.png" alt="logo">
+                        </a>
                     </div>
                     <ul class="header__left__nav">
                         <li class="header__left__item">
@@ -29,7 +29,7 @@
                         </li>
                     </ul>
                 </div>
-                <nav class="header__right">
+                <div class="header__right">
                     <ul class="header__right__nav">
                         <li class="header__right__item">
                             <a href="#" class="header__right__btn header__right__btn--active">News</a>
@@ -43,17 +43,25 @@
                         <li class="header__right__item">
                             <a href="#" class="header__right__btn">Company</a>
                         </li>
+
                     </ul>
                     <div class="header__account">
-                        <div class="login__btn"><a href="#">login</a></div>
-                        <div class="login__btn"><a href="#">open account</a></div>
+                        <a class="login__btn" href="#">login</a>
+                        <a class="login__btn" href="#">open account</a>
+                        <div class="header-burger">
+                            <span></span>
+                        </div>
+
                     </div>
+
                     <div class="lang">
                         <img class="lang-icon" src="../src/img/planet.png" alt="language">
                         <div class="lang-value">english</div>
                         <div class="lang-triangle-down"></div>
                     </div>
-                </nav>
+
+
+                </div>
             </div>
         </div>
     </header>

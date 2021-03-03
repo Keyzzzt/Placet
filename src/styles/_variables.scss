@@ -6,3 +6,22 @@ $white: #fff;
 $news-block-green: #49C5B6;
 $news-card-shadow: #EDF2F1;
 $social-bg: #F7F8F9;
+
+@mixin breakpoint($point){
+    @if $point == xl{
+        @media(max-width: 1800px){@content;}
+    }
+    @else if $point == lg{
+        @media(max-width: 1440px){@content;}
+    }
+    @else if $point == md{
+        @media(max-width: 748px){@content;}
+    }
+    @else if $point == sm{
+        @media(max-width: 520px){@content;}
+    }
+    @else if $point == xs{
+        @media(max-width: 520px){@content;}
+    }
+
+}

@@ -7,6 +7,7 @@
 
     img {
         margin-bottom: 12px;
+
     }
     h1{
         font-size: 20px;
@@ -19,6 +20,15 @@
     div:nth-child(4n + 0){
         margin-right: 0;
     }
+    @include breakpoint(xl){
+        div:nth-child(3n + 0){
+            margin-right: 0;
+        }
+        div:nth-child(4n + 0){
+            margin-right: 24px;
+        }
+    }
+
 }
 
 .news__item{
@@ -27,6 +37,13 @@
     box-shadow: 0px 12px 24px $news-card-shadow;
     border-radius: 4px;
     margin: 0 24px 24px 0;
+    @include breakpoint(xl){
+        max-width: 411px;
+    }
+    @include breakpoint(lg){
+        min-width: 272px;
+        max-width: 272px;
+    }
 
     &-bottom{
         padding: 0 24px 24px 24px;
@@ -37,6 +54,9 @@
         margin-bottom: 24px;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
+        @include breakpoint(xl){
+            width: 100%;
+        }
 
         }
     }
