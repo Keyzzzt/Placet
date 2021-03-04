@@ -2,14 +2,25 @@
 
 .footer{
     margin-top: 48px;
+    @include breakpoint(lg){
+        width: 100%;
+
+    }
     &-up{
         display: flex;
         justify-content: space-between;
+        @include breakpoint(lg){
+            display: flex;
+            flex-direction: column;
+        }
     }
     &-nav{
         display: flex;
         div{
             margin-right: 72px;
+            @include breakpoint(lg){
+                margin-bottom: 28px;
+            }
         }
         h3{
             font-size: 20px;
@@ -20,12 +31,19 @@
         }
         ul{
             margin-top: 24px;
+            @include breakpoint(lg){
+                padding: 0 24px 24px 24px;
+            }
         }
         li{
             font-weight: 500;
             font-size: 16px;
             line-height: 22.4px;
             margin-top: 12px;
+
+        }
+        @include breakpoint(lg){
+            flex-direction: column;
         }
     }
     &-apple-google-btn{
@@ -33,6 +51,18 @@
         display: flex;
         .apple, .google{
             margin-right: 16px;
+            @include breakpoint(xs){
+                margin-bottom: 16px;
+            }
+        }
+        @include breakpoint(xs){
+            flex-direction: column;
+        }
+    }
+    &__social{
+        @include breakpoint(lg){
+            position: relative;
+
         }
     }
     &-social-icons{
@@ -47,9 +77,20 @@
             align-items: center;
             margin: 24px 16px 0 0;
         }
+        @include breakpoint(lg){
+            position: absolute;
+            top: 28px;
+            left: 584px;
+        }
+        @include breakpoint(md){
+            left: 430px;
+        }
+        @include breakpoint(sm){
+            max-width: 260px;
+        } 
     }
     &-rights{
-        width: 100%;
+        width: 99%;
         p {
             font-size: 14px;
             margin-bottom: 16px;
@@ -61,6 +102,13 @@
         display: flex;
         div {
             margin-right: 16px;
+        }
+    }
+
+
+    .footer__individuals ul, .footer__business ul, .footer__company ul, .footer__social h3{
+        @include breakpoint(lg){
+            display: none;
         }
     }
 }

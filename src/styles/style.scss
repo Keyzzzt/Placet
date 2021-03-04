@@ -19,11 +19,12 @@
 
 body {
     @include roboto;
-    padding: 0 24px;
     font-size: 16px;
     line-height: 1.2;
     font-weight: 500;
     color: $main-grey; 
+    margin: 0 24px;
+
 
 }
     .container {
@@ -37,14 +38,18 @@ body {
             max-width: 864px;
         }
         @include breakpoint(md){
-            max-width: 724px;
+            width: 700px;
+
         }
         @include breakpoint(sm){
             max-width: 472px;
         } 
+        @include breakpoint(xs){
+            max-width: 312px;
+        } 
+        @include breakpoint(xxs){
+        } 
     }
-
-
 
 a {
     text-decoration: none;
@@ -55,17 +60,22 @@ a {
 
 .lang{
     display: flex;
+    align-items: center;
     cursor: pointer;
+    position: relative;
     &-icon{
         margin-right: 8px;
+        height: 100%;
     }
     &-value{
         text-transform: uppercase;
-        margin-right: 13px;
+        margin-right: 20px;
         font-size: 14px;
         font-weight: 700;
     }
     &-triangle-down{
+        position: absolute;
+        top: 0;right: 0 ;
         width: 0;
         height: 0;
         border-left:  3px solid transparent;
@@ -85,8 +95,23 @@ a {
     &-dark{
         color: $main-dark;
     }
-    @include breakpoint(lg){
-        display: none;
+    &-top{
+        @include breakpoint(lg){
+            display: none;
+        }
     }
+    &-bottom{
+        @include breakpoint(lg){
+            padding: 34px;
+            border-top: 1px solid $main-grey;
+            border-bottom: 1px solid $main-grey;
+            padding: 34px 0;
+
+        }
+        @include breakpoint(md){
+        }
+    }
+
+
 }
 

@@ -15,13 +15,16 @@ $social-bg: #F7F8F9;
         @media(max-width: 1440px){@content;}
     }
     @else if $point == md{
-        @media(max-width: 980px){@content;}
+        @media(max-width: 1024px){@content;}
     }
     @else if $point == sm{
-        @media(max-width: 520px){@content;}
+        @media(max-width: 770px){@content;}
     }
     @else if $point == xs{
         @media(max-width: 520px){@content;}
+    }
+    @else if $point == xxs{
+        @media(max-width: 360px){@content;}
     }
 
 }
