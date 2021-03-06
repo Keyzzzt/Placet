@@ -1,7 +1,7 @@
 @import '../styles/variables';
 
 .join{
-    margin: 48px 0;
+    margin: 48px -24px;
     padding: 48px 0;
     background-color: $main-green;
     display: flex;
@@ -9,14 +9,14 @@
     align-items: center;
     color: $white;
 
-    &-title{
+    &__title{
         font-weight: normal;
         font-size: 32px;
         span{
             font-weight: 700;
         }
     }
-    &-text{
+    &__text{
         margin: 16px 0 48px 0;
         font-size: 20px;
         text-align: center;
@@ -33,7 +33,7 @@
             
         }
     }
-    &-btn {
+    &__btn {
         a{
             color: $white;
             text-decoration: none;

@@ -6,7 +6,7 @@
         width: 100%;
 
     }
-    &-up{
+    &__up{
         display: flex;
         justify-content: space-between;
         @include breakpoint(lg){
@@ -14,7 +14,7 @@
             flex-direction: column;
         }
     }
-    &-nav{
+    &__nav{
         display: flex;
         div{
             margin-right: 72px;

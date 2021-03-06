@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-@import '../styles/variables.scss';
+@import 'variables.scss';
 @import "reset.scss";
 @import "header.scss";
 @import "news.scss";
@@ -63,17 +63,17 @@ a {
     align-items: center;
     cursor: pointer;
     position: relative;
-    &-icon{
+    &__icon{
         margin-right: 8px;
         height: 100%;
     }
-    &-value{
+    &__value{
         text-transform: uppercase;
         margin-right: 20px;
         font-size: 14px;
         font-weight: 700;
     }
-    &-triangle-down{
+    &__triangle--down{
         position: absolute;
         top: 0;right: 0 ;
         width: 0;
@@ -83,7 +83,7 @@ a {
         border-top: 6px solid $white;
         margin-top: 5px;
     }
-    &-triangle-down--dark{
+    &__triangle--down--dark{
         width: 0;
         height: 0;
         border-left:  3px solid transparent;
@@ -92,15 +92,15 @@ a {
         margin-top: 5px;
 
     }
-    &-dark{
+    &--dark{
         color: $main-dark;
     }
-    &-top{
+    &__top{
         @include breakpoint(lg){
             display: none;
         }
     }
-    &-bottom{
+    &__bottom{
         @include breakpoint(lg){
             padding: 34px;
             border-top: 1px solid $main-grey;
