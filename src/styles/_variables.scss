@@ -6,6 +6,16 @@ $white: #fff;
 $news-block-green: #49C5B6;
 $news-card-shadow: #EDF2F1;
 $social-bg: #F7F8F9;
+$xs-size-bg: #151515;
+
+$padding-vertical: 48px;
+$padding-vertical-sm: 24px;
+
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+$border-radius: 4px;
 
 @mixin breakpoint($point){
     @if $point == xl{

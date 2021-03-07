@@ -1,8 +1,8 @@
 @import '../styles/variables';
 
 .join{
-    margin: 48px -24px;
-    padding: 48px 0;
+    margin: 0 -24px;
+    padding: $padding-vertical 0;
     background-color: $main-green;
     display: flex;
     flex-direction: column;
@@ -10,10 +10,10 @@
     color: $white;
 
     &__title{
-        font-weight: normal;
+        font-weight: $regular;
         font-size: 32px;
         span{
-            font-weight: 700;
+            font-weight: $bold;
         }
     }
     &__text{
@@ -36,12 +36,11 @@
     &__btn {
         a{
             color: $white;
-            text-decoration: none;
             background-color: $main-dark;
-            border-radius: 4px;
+            border-radius: $border-radius;
             padding: 11px 24px;
             font-size: 14px;
-            font-weight: 700;
+            font-weight: $bold;
             text-transform: uppercase;
         }
     }

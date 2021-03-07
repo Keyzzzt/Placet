@@ -1,44 +1,79 @@
 @import '../styles/variables';
 
 .footer{
-    margin-top: 48px;
-    @include breakpoint(lg){
+    padding: $padding-vertical 0 56px 0;
+    @include breakpoint(lg) {
         width: 100%;
-
     }
-    &__up{
+    @include breakpoint(xs) {
+        background-color: $xs-size-bg;
+        margin-top: 24px;
+    }
+    
+    &__up {
         display: flex;
         justify-content: space-between;
         @include breakpoint(lg){
             display: flex;
             flex-direction: column;
         }
+        @include breakpoint(xs){
+            width: 100%;
+        }
     }
-    &__nav{
+    &__nav {
         display: flex;
-        div{
+        .active-footer-menu{
+            color: $main-dark;
+            @include breakpoint(xs) {
+                color: $social-bg;
+            }
+        }
+        div {
             margin-right: 72px;
+            position: relative;
+            cursor: pointer;
+            .triangle-up-dark, {
+                display: none;
+                @include breakpoint(lg){
+                    display: inline-block;
+                    margin-left: 13px;
+                    top: 24px;
+                }
+            }
+            .triangle-down-gray{
+                display: none;
+                @include breakpoint(lg){
+                    display: inline-block;
+                    margin-left: 13px;
+                    top: 30px;
+                }
+            }
             @include breakpoint(lg){
                 margin-bottom: 28px;
             }
+            @include breakpoint(xs){
+                margin-left: 0;
+            }
         }
-        h3{
+        h3 {
+            cursor: pointer;
             font-size: 20px;
             color: $main-dark;
-            font-weight: 700;
-            line-height: 28px;
-    
+            font-weight: $bold;
+            @include breakpoint(lg){
+                display: inline;
+                color: $main-grey;
+            }
         }
-        ul{
+        ul {
             margin-top: 24px;
             @include breakpoint(lg){
                 padding: 0 24px 24px 24px;
             }
         }
-        li{
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 22.4px;
+        li {
+            line-height: 22px;
             margin-top: 12px;
 
         }
@@ -47,7 +82,7 @@
         }
     }
     &-apple-google-btn{
-        margin: 48px 0;
+        padding: $padding-vertical 0;
         display: flex;
         .apple, .google{
             margin-right: 16px;
@@ -57,16 +92,24 @@
         }
         @include breakpoint(xs){
             flex-direction: column;
+            border-top: 1px solid $main-grey;
+            padding-top: 29px;
+            margin-top: 105px;
+
+            
         }
     }
     &__social{
         @include breakpoint(lg){
             position: relative;
-
+        }
+        @include breakpoint(lg){
+            height: 0;  
         }
     }
     &-social-icons{
-        display: flex; 
+        display: flex;
+
         div {
             height: 40px;
             width: 40px;
@@ -76,18 +119,36 @@
             justify-content: center;
             align-items: center;
             margin: 24px 16px 0 0;
+            @include breakpoint(xs){
+            background-color: #000;
+            }
+            i{
+                color: $main-dark;
+                font-size: 20px;
+                @include breakpoint(xs){
+                    color: #eaeaea;
+                    }
+            }
         }
         @include breakpoint(lg){
             position: absolute;
-            top: 28px;
-            left: 584px;
+            top: 29px;
+            left: 600px;
         }
         @include breakpoint(md){
-            left: 430px;
+            left: 436px;
         }
+
         @include breakpoint(sm){
-            max-width: 260px;
+            left: 208px;
         } 
+        @include breakpoint(xs){
+            left: 0;
+            top: 255px;
+            margin-right: -50px !important;
+        }
+
+        
     }
     &-rights{
         width: 99%;
@@ -95,10 +156,13 @@
             font-size: 14px;
             margin-bottom: 16px;
         }
+        @include breakpoint(xs){
+            color: #eaeaea;
+            font-weight: $regular;
+        }
 
     }
     &-cards {
-        margin: 48px 0 56px;
         display: flex;
         div {
             margin-right: 16px;

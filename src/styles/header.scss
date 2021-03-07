@@ -46,10 +46,9 @@
     &__nav-item a{
         color: $white;
         font-size: 14px;
-        font-weight: 700;
+        font-weight: $bold;
         margin-right: 36px;
         text-transform: uppercase;
-        text-decoration: none;
         padding: 19px 0;
         @include breakpoint(xl){
             margin-right: 30px;
@@ -73,12 +72,12 @@
     }
     &__account-btn{
         font-size: 14px;
+        font-weight: $bold;
         color: $white;
         margin-right: 36px;
         text-transform: uppercase;
-        text-decoration: none;
         border: 1px solid $white;
-        border-radius: 5px;
+        border-radius: $border-radius;
         padding: 10px;
     
     }

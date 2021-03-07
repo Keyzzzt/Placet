@@ -21,13 +21,12 @@ body {
     @include roboto;
     font-size: 16px;
     line-height: 1.2;
-    font-weight: 500;
+    font-weight: $medium;
     color: $main-grey; 
     margin: 0 24px;
 
-
 }
-    .container {
+    .container, .container-footer {
         max-width: 1600px;
         margin: 0 auto;
 
@@ -38,17 +37,16 @@ body {
             max-width: 864px;
         }
         @include breakpoint(md){
-            width: 700px;
-
+            max-width: 700px;
         }
         @include breakpoint(sm){
             max-width: 472px;
         } 
+    }
+    .container{
         @include breakpoint(xs){
-            max-width: 312px;
-        } 
-        @include breakpoint(xxs){
-        } 
+            width: 312px;
+        }
     }
 
 a {
@@ -57,61 +55,118 @@ a {
 }
 
 
-
 .lang{
     display: flex;
     align-items: center;
     cursor: pointer;
     position: relative;
-    &__icon{
+
+    @include breakpoint(lg){
+        .triangle--down--dark{
+            border-top: 6px solid $main-grey;
+        }
+    }
+
+    i{
         margin-right: 8px;
-        height: 100%;
+        @include breakpoint(xs){
+            color: #eaeaea;
+        }
     }
     &__value{
         text-transform: uppercase;
         margin-right: 20px;
         font-size: 14px;
-        font-weight: 700;
-    }
-    &__triangle--down{
-        position: absolute;
-        top: 0;right: 0 ;
-        width: 0;
-        height: 0;
-        border-left:  3px solid transparent;
-        border-right: 3px solid transparent;
-        border-top: 6px solid $white;
-        margin-top: 5px;
-    }
-    &__triangle--down--dark{
-        width: 0;
-        height: 0;
-        border-left:  3px solid transparent;
-        border-right: 3px solid transparent;
-        border-top: 6px solid $main-dark;
-        margin-top: 5px;
+        font-weight: $bold;
+        @include breakpoint(xs){
+             color: $social-bg;  
+             font-size: 20px;
+             text-transform: none;
+        }
 
-    }
-    &--dark{
-        color: $main-dark;
     }
     &__top{
         @include breakpoint(lg){
             display: none;
         }
     }
-    &__bottom{
+    &--bottom{
+        padding: 11px;
+        color: $main-dark;
+        div {
+            display: flex;
+            align-items: center;
+        }
         @include breakpoint(lg){
             padding: 34px;
             border-top: 1px solid $main-grey;
             border-bottom: 1px solid $main-grey;
             padding: 34px 0;
+            color: $main-grey;
 
         }
         @include breakpoint(md){
+            color: $main-grey;
+        }
+        @include breakpoint(xs){
+            border-bottom: none;
         }
     }
-
-
 }
 
+
+
+.triangle-down-white, 
+.triangle-down-dark, 
+.triangle-up-dark,
+.triangle-down-gray {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left:  3px solid transparent;
+    border-right: 3px solid transparent;
+    top: 50%;right: 0;
+    transform: translateY(-50%);
+} 
+.triangle-down-white{
+    border-top: 6px solid $white;
+}
+.triangle-down-dark, .triangle-up-dark{
+    border-top: 6px solid $main-dark;
+}
+
+.triangle-down-dark{
+    @include breakpoint(lg){
+        left: 100px;
+    border-top: 6px solid $main-grey;
+
+    }
+    @include breakpoint(xs){
+        border-top: 6px solid $social-bg;
+
+    }
+}
+.triangle-up-dark{
+    transform: rotate(180deg);
+    @include breakpoint(xs){
+        border-top: 6px solid $social-bg;
+    }
+}
+.triangle-down-gray{
+    border-top: 6px solid $main-grey;
+}
+
+.lang__list{
+    display: none;
+    .lang__list-item{
+        display: flex;
+        padding: 13px 0;
+        img{
+            margin-right: 13px;
+            margin-left: 26px;
+        }
+    }
+    @include breakpoint(xs){
+        display: block;
+    }
+}

@@ -2,7 +2,9 @@
 
 .news{
     &__header-logo {
-        margin: 48px auto;
+        margin: 0 auto;
+        padding-top: $padding-vertical;
+        padding-bottom: $padding-vertical;
         text-align: center;
         img {
             margin-bottom: 12px;
@@ -13,19 +15,18 @@
         }
         h1{
             font-size: 20px;
-            font-weight: 700;
+            font-weight: $bold;
         }
     }
     &__content-row{
         display: flex;
         flex-wrap: wrap;
         margin-right: -24px;
-
         .news__item{
             max-width: 255px;
             min-width: 382px;
             box-shadow: 0px 12px 24px $news-card-shadow;
-            border-radius: 4px;
+            border-radius: $border-radius;
             margin: 0 24px 24px 0;
             @include breakpoint(xl){
                 max-width: 411px;
@@ -46,14 +47,12 @@
             } 
         
             &-bottom{
-                padding: 0 24px 24px 24px;
+                padding: 24px;
             }
             &-image{
-        
                 img {
-                margin-bottom: 24px;
-                border-top-left-radius: 4px;
-                border-top-right-radius: 4px;
+                border-top-left-radius: $border-radius;
+                border-top-right-radius: $border-radius;
                 @include breakpoint(xl){
                     width: 100%;
                 }
@@ -68,17 +67,15 @@
             }
             &-title{
                 font-size: 24px;
+                font-weight: $bold;
                 color: $main-dark;
                 margin-bottom: 13px;
             }
             &-date{
-                margin-bottom: 25px;
+                margin-bottom: 24px;
             }
             &-text{
-                margin-bottom: 25px;
-                font-weight: 500;
-                font-size: 16px;
-                color: $main-grey;
+                margin-bottom: 24px;
             }
             &-btn{
                 a {
@@ -102,26 +99,20 @@
     &__load-more {
         display: flex;
         justify-content: center;
-        margin: 24px;
-        a{
+        padding-top: $padding-vertical;
+        padding-bottom: $padding-vertical;
+        a {
             text-decoration: none;
             color: $news-block-green;
             text-transform: uppercase;
             font-weight: 700;
             font-size: 14px;
-            line-height: 16.8px;
+            line-height: 17px;
             border: 1px solid $news-block-green;
             border-radius: 4px;
-            padding: 11.5px 24px;
+            padding: 11px 24px;
         }
     }
-
-
-
-
-
-
-    
 }
 
 
