@@ -12,6 +12,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.font-sm{
+    font-size: 14px;
+}
+.bold{
+    font-weight: $bold;
+}
 
 *, *:before, *:after{
     box-sizing: border-box;
@@ -70,7 +76,7 @@ a {
     i{
         margin-right: 8px;
         @include breakpoint(xs){
-            color: #eaeaea;
+            color: $secondary-grey;
         }
     }
     &__value{
@@ -79,7 +85,7 @@ a {
         font-size: 14px;
         font-weight: $bold;
         @include breakpoint(xs){
-             color: $social-bg;  
+             color: $secondary-grey;  
              font-size: 20px;
              text-transform: none;
         }
@@ -142,14 +148,14 @@ a {
 
     }
     @include breakpoint(xs){
-        border-top: 6px solid $social-bg;
+        border-top: 6px solid $secondary-grey;
 
     }
 }
 .triangle-up-dark{
     transform: rotate(180deg);
     @include breakpoint(xs){
-        border-top: 6px solid $social-bg;
+        border-top: 6px solid $secondary-grey;
     }
 }
 .triangle-down-gray{

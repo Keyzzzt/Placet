@@ -26,7 +26,7 @@
         .active-footer-menu{
             color: $main-dark;
             @include breakpoint(xs) {
-                color: $social-bg;
+                color: $secondary-grey;
             }
         }
         div {
@@ -114,7 +114,7 @@
             height: 40px;
             width: 40px;
             border-radius: 100%;
-            background-color: $social-bg;
+            background-color: $secondary-grey;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -126,7 +126,7 @@
                 color: $main-dark;
                 font-size: 20px;
                 @include breakpoint(xs){
-                    color: #eaeaea;
+                    color: $secondary-grey;
                     }
             }
         }
@@ -155,12 +155,11 @@
         p {
             font-size: 14px;
             margin-bottom: 16px;
+            font-weight: $regular;
         }
         @include breakpoint(xs){
             color: #eaeaea;
-            font-weight: $regular;
         }
-
     }
     &-cards {
         display: flex;

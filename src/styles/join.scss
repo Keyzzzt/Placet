@@ -20,6 +20,7 @@
         margin: 16px 0 48px 0;
         font-size: 20px;
         text-align: center;
+        font-weight: $regular;
         @include breakpoint(md){
             width: 652px;
             
@@ -39,8 +40,8 @@
             background-color: $main-dark;
             border-radius: $border-radius;
             padding: 11px 24px;
-            font-size: 14px;
             font-weight: $bold;
+            font-size: 14px;
             text-transform: uppercase;
         }
     }

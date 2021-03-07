@@ -43,35 +43,41 @@
         align-items: center;
         margin-right: 64px;
     }
-    &__nav-item a{
+    &__nav-item--left a, &__nav-item--right a{
         color: $white;
-        font-size: 14px;
-        font-weight: $bold;
         margin-right: 36px;
         text-transform: uppercase;
-        padding: 19px 0;
         @include breakpoint(xl){
             margin-right: 30px;
         }
+
     }
-    &__nav-item a:hover{
+    &__nav-item--left a, &__nav-item--right a{
+        padding: 19px 0;
+    }
+    &__nav-item--right a:hover{
+        padding: 20px 0;
+        color: $main-green;
+        border-bottom: 4px solid $main-green;
+    }
+
+    &__nav-item--left a:hover{
         color: $main-green;
         border-bottom: 4px solid $main-green;
     }
     &__account{
         display: flex;
+        font-size: 14px;
         @include breakpoint(lg){
             :nth-last-child(2){
                 margin-right: 50px;
-            }
-
+             }
         }
         @include breakpoint(md){
             display: none;
         }
     }
     &__account-btn{
-        font-size: 14px;
         font-weight: $bold;
         color: $white;
         margin-right: 36px;

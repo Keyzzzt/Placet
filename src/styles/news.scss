@@ -101,13 +101,12 @@
         justify-content: center;
         padding-top: $padding-vertical;
         padding-bottom: $padding-vertical;
+        font-size: 14px;
         a {
             text-decoration: none;
             color: $news-block-green;
             text-transform: uppercase;
             font-weight: 700;
-            font-size: 14px;
-            line-height: 17px;
             border: 1px solid $news-block-green;
             border-radius: 4px;
             padding: 11px 24px;
