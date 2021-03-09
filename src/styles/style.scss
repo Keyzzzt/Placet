@@ -6,6 +6,7 @@
 @import "join.scss";
 @import "footer.scss";
 @import "temp.scss";
+@import "hamburger.scss";
 
 @mixin roboto {
     font-family: 'Roboto', sans-serif;
@@ -13,6 +14,13 @@
 
 .font-sm{
     font-size: 14px;
+}
+
+.display-block{
+    display: block !important;
+}
+.active-footermenu-color{
+    color: $main-dark !important;
 }
 .bold{
     font-weight: $bold;
@@ -54,11 +62,6 @@ body {
     align-items: center;
     cursor: pointer;
     position: relative;
-    @include breakpoint(md){
-        .triangle--down--dark{
-            border-top: 6px solid $main-grey;
-        }
-    }
     i{
         margin-right: 8px;
         @include breakpoint(xs){
@@ -72,12 +75,10 @@ body {
         font-weight: $bold;
         @include breakpoint(xxs){
              color: $secondary-grey;  
-             font-size: 20px;
              text-transform: none;
         } 
 
     }
-
     &__top{
         @include breakpoint(md){
             display: none;
@@ -88,22 +89,14 @@ body {
         padding: 11px;
         color: $main-dark;
         @include breakpoint(md){
-            padding: 34px;
             padding: 34px 0;
             color: $main-grey;   
             i {
                 color: $main-grey;
             }     
         }
-        div {
-            display: flex;
-            align-items: center;
-        }
-
     }
 }
-
-
 
 .triangle-down-white, 
 .triangle-down-dark, 
@@ -126,7 +119,6 @@ body {
 
 .triangle-down-dark{
     @include breakpoint(md){
-        left: 100px;
         border-top: 6px solid $main-grey;
     }
 

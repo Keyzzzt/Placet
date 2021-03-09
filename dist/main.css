@@ -399,17 +399,10 @@ a {
 .footer__nav {
   display: flex;
 }
-.footer__nav .active-footer-menu {
-  color: #17191C;
-}
-@media (max-width: 520px) {
-  .footer__nav .active-footer-menu {
-    color: #F7F8F9;
-  }
-}
 .footer__nav div {
   margin-right: 72px;
   position: relative;
+  display: block;
   cursor: pointer;
 }
 @media (max-width: 1442px) {
@@ -557,8 +550,17 @@ a {
   margin-right: 16px;
 }
 @media (max-width: 1442px) {
-  .footer .footer__individuals ul, .footer .footer__business ul, .footer .footer__company ul, .footer .footer__social h3 {
+  .footer .footer__information ul, .footer .footer__individuals ul, .footer .footer__business ul, .footer .footer__company ul, .footer .footer__social h3 {
     display: none;
+  }
+}
+
+.active-footer-menu {
+  color: #17191C !important;
+}
+@media (max-width: 520px) {
+  .active-footer-menu {
+    color: #F7F8F9;
   }
 }
 
@@ -639,8 +641,127 @@ a {
   }
 }
 
+.ham {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  background-color: #151515;
+  display: none;
+  padding: 24px 48px;
+  border-bottom-left-radius: 20px;
+}
+.ham__header {
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ham__header .header__close {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: #fff;
+}
+.ham__header .header__close i {
+  font-size: 29px;
+}
+.ham__header .header__close i:hover {
+  color: #00D1CD;
+}
+.ham .burger-header__left-nav {
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+  padding: 12px 0;
+  display: none;
+}
+@media (max-width: 1020px) {
+  .ham .burger-header__left-nav {
+    display: flex;
+  }
+}
+.ham .burger-header__left-nav .left-item a {
+  color: #fff;
+}
+.ham .burger-header__left-nav .left-item a:hover {
+  border-bottom: none;
+  color: #00D1CD;
+}
+.ham .original-right .nav__item .nav-item__header {
+  display: flex;
+}
+.ham .original-right .nav__item .nav-item__header h3 {
+  text-transform: uppercase;
+  color: #fff;
+  padding: 12px 0;
+  cursor: pointer;
+}
+.ham .original-right .nav__item .nav-item__header h3:hover {
+  color: #00D1CD;
+}
+.ham .original-right .nav__item .triangle-down-white {
+  position: static;
+  margin-left: 13px;
+  margin-top: 22px;
+}
+.ham .original-right .nav__item a {
+  color: #fff;
+}
+.ham .original-right .nav__item a:hover {
+  color: #00D1CD;
+}
+.ham .original-right .nav__item ul {
+  display: none;
+}
+.ham .original-right .nav__item ul li {
+  padding: 6px 0 0 24px;
+}
+.ham-lang {
+  width: 100px;
+  padding: 12px 0;
+}
+.ham-lang .lang__value, .ham-lang i {
+  color: #fff;
+}
+.ham .burger__lang-color {
+  color: #fff !important;
+}
+.ham-login {
+  padding: 24px 0;
+  display: none;
+}
+@media (max-width: 1020px) {
+  .ham-login {
+    display: block;
+  }
+}
+.ham-login a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+.ham-login a:hover {
+  background: #00D1CD;
+  border: 1px solid #00D1CD;
+}
+
 .font-sm {
   font-size: 14px;
+}
+
+.display-block {
+  display: block !important;
+}
+
+.active-footermenu-color {
+  color: #17191C !important;
 }
 
 .bold {
@@ -697,11 +818,6 @@ body {
   cursor: pointer;
   position: relative;
 }
-@media (max-width: 1442px) {
-  .lang .triangle--down--dark {
-    border-top: 6px solid #8B959E;
-  }
-}
 .lang i {
   margin-right: 8px;
 }
@@ -719,7 +835,6 @@ body {
 @media (max-width: 520px) {
   .lang__value {
     color: #F7F8F9;
-    font-size: 20px;
     text-transform: none;
   }
 }
@@ -734,21 +849,12 @@ body {
 }
 @media (max-width: 1442px) {
   .lang--bottom {
-    padding: 34px;
     padding: 34px 0;
     color: #8B959E;
   }
   .lang--bottom i {
     color: #8B959E;
   }
-}
-.lang--bottom div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .triangle-down-white,
@@ -776,7 +882,6 @@ body {
 
 @media (max-width: 1442px) {
   .triangle-down-dark {
-    left: 100px;
     border-top: 6px solid #8B959E;
   }
 }

@@ -36,7 +36,7 @@
                             <a href="#" class="header__left__btn">Personal</a>
                         </li>
                         <li class="header__nav-item--left">
-                            <a href="#" class="header__left__btn">Personal</a>
+                            <a href="#" class="header__left__btn">Business</a>
                         </li>
                     </ul>
 
@@ -59,15 +59,15 @@
                     </ul>
 
                     <div class="header__account">
-                        <a class="header__account-btn font-sm" href="#">login</a>
-                        <a class="header__account-btn font-sm" href="#">open account</a>
+                        <a class="header__account-btn font-sm" href="#">Login</a>
+                        <a class="header__account-btn font-sm" href="#">Open account</a>
                     </div>
                     <div class="header__burger">
                         <span></span>
                     </div>
                     <div class="lang lang__top">
                         <i class="fas fa-globe-americas"></i>
-                        <div class="lang__value">english</div>
+                        <div class="lang__value">English</div>
                         <div class="triangle-down-white"></div>
                     </div>
 
@@ -253,10 +253,9 @@
             <div class="footer__up">
                 <div class="footer__nav">
                     <div class="footer__information nav__item">
-                        <h3 class="active-footer-menu">Information</h3>
-                        <div class="triangle-up-dark"></div>
-
-                        <ul>
+                        <h3 class="info__title" class="">Information</h3>
+                        <div class="triangle-down-gray"></div>
+                        <ul id="info">
                             <li><a href="#">Fees</a></li>
                             <li><a href="#">Blog</a></li>
                             <li><a href="#">Help</a></li>
@@ -265,7 +264,7 @@
                         </ul>
                     </div>
                     <div class="footer__individuals nav__item">
-                        <h3>Individuals</h3>
+                        <h3 class="ind__title">Individuals</h3>
                         <div class="triangle-down-gray"></div>
                         <ul>
                             <li><a href="#">YoxPay card</a></li>
@@ -273,7 +272,7 @@
                         </ul>
                     </div>
                     <div class="footer__business nav__item">
-                        <h3>Business</h3>
+                        <h3 class="bus__title">Business</h3>
                         <div class="triangle-down-gray"></div>
                         <ul>
                             <li><a href="#">Business solutions</a></li>
@@ -283,7 +282,7 @@
                         </ul>
                     </div>
                     <div class="footer__company nav__item">
-                        <h3>Company</h3>
+                        <h3 class="com__title">Company</h3>
                         <div class="triangle-down-gray"></div>
                         <ul>
                             <li><a href="#">About</a></li>
@@ -331,19 +330,16 @@
                             </div>
                             <div class="lang__list-item">
                                 <img src="../src/img/spanish.png" alt="spanish">
-                                <div>Russian</div>
+                                <div>Spanish</div>
                             </div>
                             <div class="lang__list-item">
                                 <img src="../src/img/romanian.png" alt="romanian">
-                                <div>Russian</div>
+                                <div>Romanian</div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
 
             <div class="footer-apple-google-btn">
                 <div class="apple"><a href="#"><img src="../src/img/apple.png" alt=""></a></div>
@@ -383,6 +379,95 @@
         </div>
     </footer>
     <!-- footer  -->
+
+
+    <!-- burger menu -->
+
+    <nav class="ham">
+        <div class="ham__header">
+            <div class="logo"><img src="../src/img/logo.png" alt="YoxPay"></div>
+            <div class="header__close"><i class="far fa-times-circle"></i></div>
+        </div>
+        <div class="original-left">
+            <ul class="burger-header__left-nav">
+                <li class="left-item">
+                    <a href="#" class="">Personal</a>
+                </li>
+                <li class="left-item">
+                    <a href="#" class="header__left__btn">Business</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="original-right">
+            <div class="nav__item">
+                <div class="nav-item__header">
+                    <h3 class="burger__news-title" class="">News</h3>
+                </div>
+            </div>
+            <div class="nav__item">
+                <div class="nav-item__header">
+                    <h3 class="burger__fees-title" class="">Fees</h3>
+                    <div class="triangle-down-white"></div>
+                </div>
+                <ul class="burger__fees-list">
+                    <li><a href="#">For business accounts</a></li>
+                    <li><a href="#">For private clients</a></li>
+                </ul>
+            </div>
+            <div class="nav__item">
+                <div class="nav-item__header">
+                    <h3 class="burger__yoxpay-title" class="">Yoxpay card</h3>
+                    <div class="triangle-down-white"></div>
+                </div>
+
+                <ul class="burger__yoxpay-list">
+                    <li>
+                        <div class="card"></div>
+                        <a href="#">Prepaid Card</a>
+                    </li>
+                    <li><a href="#">Virtual Card</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__item">
+                <div class="nav-item__header">
+                    <h3 class="info__title" class="">Company</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="lang-wrapper burger-lang">
+            <div class="ham-lang lang">
+                <i class="fas fa-globe-americas"></i>
+                <div class="lang__value">English</div>
+                <div class="triangle-down-white"></div>
+            </div>
+            <div class="lang__list lang__list-burger">
+                <div class="lang__list-item">
+                    <img src="../src/img/russian.png" alt="russian">
+                    <div class="burger__lang-color">Russian</div>
+                </div>
+                <div class="lang__list-item">
+                    <img src="../src/img/spanish.png" alt="spanish">
+                    <div class="burger__lang-color">Spanish</div>
+                </div>
+                <div class="lang__list-item">
+                    <img src="../src/img/romanian.png" alt="romanian">
+                    <div class="burger__lang-color">Romanian</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="ham-login">
+            <a href="#">Log in</a>
+            <a href="#">Open account</a>
+        </div>
+
+    </nav>
 
 
     <script src="./main.js"></script>

@@ -1,0 +1,134 @@
+@import './variables';
+
+
+.ham{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
+    background-color: $xs-size-bg;
+    display: none;
+    padding: 24px 48px;
+    border-bottom-left-radius: 20px;
+    &__header{
+        padding: 24px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header__close{
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            color: $white;
+            i{
+                font-size: 29px;
+                &:hover{
+                    color: $main-green;
+                }
+            }
+            }
+        }
+    
+        .burger-header__left-nav{
+            display: flex;
+            justify-content: space-around;
+            text-transform: uppercase;
+            padding: 12px 0;
+            display: none;
+            @include breakpoint(sm){
+                display: flex;
+        }
+  
+            .left-item a{
+                color: $white;
+                &:hover {
+                    border-bottom: none;
+                    color: $main-green;
+                }
+            }
+        }
+
+    .original-right{
+
+        .nav__item{
+            .nav-item__header{
+                display: flex;
+                h3{
+                    text-transform: uppercase;
+                    color: $white;
+                    padding: 12px 0;
+                cursor: pointer;
+    
+                    &:hover{
+                        color: $main-green;
+                    }
+                }
+            }
+            .triangle-down-white{
+                position: static;
+                margin-left: 13px;
+                margin-top: 22px;
+            }
+
+
+            a{
+                color: $white;
+                &:hover{
+                    color: $main-green;
+                }
+            }
+            ul{
+                display: none;
+                li {
+                padding: 6px 0 0 24px;
+
+
+                }
+            }
+        }
+    }
+
+    // ------------- LANGUAGE
+
+    &-lang{
+        width: 100px;
+        padding: 12px 0;
+        .lang__value, i{
+            color: $white;
+        }
+    }
+    .burger__lang-color {
+        color: $white !important;
+    }
+
+
+    // ------------- LOG IN
+
+    &-login{
+        padding: 24px 0;
+        display: none;
+            @include breakpoint(sm){
+                display: block;
+        }
+            a {
+                display: block;
+                padding: 10px;
+                text-align: center;
+                text-transform: uppercase;
+                color: $white;
+                width: 100%;
+                border: 1px solid $white;
+                border-radius: $border-radius;
+                margin-bottom: 12px;
+
+            &:hover {
+                background: $main-green;
+                border: 1px solid $main-green;
+
+            }
+        }
+
+
+    }
+
+}

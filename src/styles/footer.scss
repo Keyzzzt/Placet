@@ -36,15 +36,10 @@
     }
     &__nav {
         display: flex;
-        .active-footer-menu{
-            color: $main-dark;
-            @include breakpoint(xxs) {
-                color: $secondary-grey;
-            }
-        }
         div {
             margin-right: 72px;
             position: relative;
+            display: block;
             cursor: pointer;
             @include breakpoint(md){
                 margin-bottom: 28px;
@@ -176,13 +171,18 @@
     }
 
 
-    .footer__individuals ul, .footer__business ul, .footer__company ul, .footer__social h3{
+    .footer__information ul, .footer__individuals ul, .footer__business ul, .footer__company ul, .footer__social h3{
         @include breakpoint(md){
             display: none;
         }
     }
 }
-
+.active-footer-menu{
+    color: $main-dark !important;
+    @include breakpoint(xxs) {
+        color: $secondary-grey;
+    }
+}
 
 
 
