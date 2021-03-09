@@ -1,30 +1,46 @@
 @import '../styles/variables';
 
 .footer{
-    padding: $padding-vertical 0 56px 0;
-
-    // @include breakpoint(xs) {
-    //     background-color: $xs-size-bg;
-    //     margin-top: 24px;
-    // }
+    padding-bottom: 56px;
+    @include breakpoint(lg) {
+        padding-bottom: 36px;
+    }
+    @include breakpoint(md) {
+        padding-bottom: 35px;
+    }
+    @include breakpoint(md) {
+        padding-bottom: 42px;
+    }
+    @include breakpoint(md) {
+        padding-bottom: 34px;
+    }
+    @include breakpoint(xxs) {
+        background-color: $xs-size-bg;
+        margin-top: 24px;
+    }
     
     &__up {
         display: flex;
+        width: 100%;
+        padding: 48px;
         @include breakpoint(md){
             display: flex;
             flex-direction: column;
+            padding-top: 54px;
         }
-        // @include breakpoint(xs){
-        //     width: 100%;
-        // }
+        @include breakpoint(sm){
+            display: flex;
+            flex-direction: column;
+            padding-top: 30px;
+        }
     }
     &__nav {
         display: flex;
         .active-footer-menu{
             color: $main-dark;
-            // @include breakpoint(xs) {
-            //     color: $secondary-grey;
-            // }
+            @include breakpoint(xxs) {
+                color: $secondary-grey;
+            }
         }
         div {
             margin-right: 72px;
@@ -33,9 +49,7 @@
             @include breakpoint(md){
                 margin-bottom: 28px;
             }
-            // @include breakpoint(xs){
-            //     margin-left: 0;
-            // }
+
             .triangle-up-dark {
                 display: none;
                 @include breakpoint(md){
@@ -51,8 +65,7 @@
                     margin-left: 13px;
                     top: 30px;
                 }
-            }
-
+            } 
         }
         h3 {
             cursor: pointer;
@@ -84,16 +97,14 @@
         display: flex;
         .apple, .google{
             margin-right: 16px;
-            // @include breakpoint(xs){
-            //     margin-bottom: 16px;
-            // }
+            @include breakpoint(xxs){
+                margin-bottom: 16px;
+            }
         }
-        // @include breakpoint(xs){
-        //     flex-direction: column;
-        //     border-top: 1px solid $main-grey;
-        //     padding-top: 29px;
-        //     margin-top: 105px;
-        // }
+        @include breakpoint(xxs){
+            flex-direction: column;
+            padding-top: 28px;
+        }
     }
 
     .lang-plus-social{
@@ -102,8 +113,13 @@
         justify-content: space-between;
         
         @include breakpoint(md){
+            width: 100%;
             border-top: 1px solid $main-grey;
             border-bottom: 1px solid $main-grey;
+        }
+        @include breakpoint(xxs){
+            flex-direction: column;
+            padding: 34px 0 28px 0; 
         }
         .footer__social{
             @include breakpoint(md){
@@ -122,42 +138,35 @@
                 justify-content: center;
                 align-items: center;
                 margin: 24px 16px 0 0;
-                // @include breakpoint(xs){
-                // background-color: #000;
-                // }
+                @include breakpoint(xxs){
+                background-color: #000;
+                }
                 i{
                     color: $main-dark;
                     font-size: 20px;
-                    // @include breakpoint(xs){
-                    //     color: $secondary-grey;
-                    //     }
+                    @include breakpoint(xxs){
+                        color: $secondary-grey;
+                        }
                 }
                 &:nth-child(5){
                     margin-right: 0;
                 }
-            }
-    
-            // @include breakpoint(xs){
-            //     left: 0;
-            //     top: 255px;
-            //     margin-right: -50px !important;
-            // }
-    
+            }    
             
         }
     }
 
 
     &-rights{
-        width: 99%;
+        width: 100%;
         p {
             font-size: 14px;
             margin-bottom: 16px;
             font-weight: $regular;
         }
-        // @include breakpoint(xs){
-        //     color: #eaeaea;
-        // }
+        @include breakpoint(xxs){
+            color: #eaeaea;
+        }
     }
     &-cards {
         display: flex;

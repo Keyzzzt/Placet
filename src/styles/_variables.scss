@@ -29,13 +29,13 @@ $border-radius: 4px;
         @media(max-width: 1442px){@content;}
     }
     @else if $point == sm{
-        @media(max-width: 1024px){@content;}
+        @media(max-width: 1020px){@content;}
     }
     @else if $point == xs{
-        @media(max-width: 520px){@content;}
+        @media(max-width: 748px){@content;}
     }
     @else if $point == xxs{
-        @media(max-width: 360px){@content;}
+        @media(max-width: 520px){@content;}
     }
 
 }

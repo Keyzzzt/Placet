@@ -31,45 +31,24 @@
                 max-width: 382px;
             }
             @include breakpoint(lg){
-                max-width: 411px;
-                &:nth-child(2){
-                    max-width: 410px;
-                }
-                &:nth-child(3n + 5){
-                    max-width: 410px;
-                }
+                max-width: 410px;
             }
             @include breakpoint(md){
                 max-width: 272px;
-                &:nth-child(2){
-                    max-width: 272px;
-                }
-                &:nth-child(3n + 5){
-                    max-width: 272px;
-                }
             }
             @include breakpoint(sm){
                 max-width: 338px;
-                &:nth-child(2){
-                    max-width: 338px;
-                }
-                &:nth-child(3n + 5){
-                    max-width: 338px;
+                &:nth-child(2n + 2){
+                    margin-right: 0;
                 }
             }
-            
-
-
-
-            /*
-            @include breakpoint(sm){
-                min-width: 472px;
-    
-            } 
             @include breakpoint(xs){
-                min-width: 312px;
-            } */
-        
+                max-width: 472px;
+                &:nth-child(1n + 2){
+                    margin-right: 24px;
+                }
+            }
+       
             &-bottom{
                 padding: 24px;
             }
@@ -77,14 +56,8 @@
                 img {
                 border-top-left-radius: $border-radius;
                 border-top-right-radius: $border-radius;
-                @include breakpoint(lg){
-                    min-width: 100%;
-                }
-                @include breakpoint(md){
-                    max-width: 100%;
-                }
+                width: 100%;
 
-        
                 }
             }
             &-title{

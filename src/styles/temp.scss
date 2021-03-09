@@ -52,6 +52,14 @@
         @include breakpoint(xs){
             display: flex;
         }
+        @include breakpoint(xxs){
+            display: none;
+        }
+    }
+    &.xxs {
+        @include breakpoint(xxs){
+            display: flex;
+        }
     }
 
     
