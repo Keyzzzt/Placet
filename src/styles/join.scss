@@ -2,12 +2,21 @@
 
 .join{
     margin: 0 -24px;
-    padding: $padding-vertical 0;
+    padding: $padding-vertical 432px;
     background-color: $main-green;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: $white;
+    @include breakpoint(lg){
+        padding: $padding-vertical 112px;
+    }
+    @include breakpoint(md){
+        padding: $padding-vertical 48px;
+    }
+    @include breakpoint(md){
+        padding: $padding-vertical 0;
+    }
 
     &__title{
         font-weight: $regular;
@@ -21,18 +30,6 @@
         font-size: 20px;
         text-align: center;
         font-weight: $regular;
-        @include breakpoint(md){
-            width: 652px;
-            
-        }
-        @include breakpoint(sm){
-            width: 472px;
-            
-        }
-        @include breakpoint(xs){
-            width: 312px;
-            
-        }
     }
     &__btn {
         a{

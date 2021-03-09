@@ -1,0 +1,58 @@
+.screen-size{
+    padding: 20px;
+    background-color: rgba(255, 255, 56, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+    color: #000;
+    display: none;
+    position: fixed;
+    top: 30px;
+    &.infinite{
+        display: flex;
+        @include breakpoint(xl){
+            display: none;
+        }
+    }
+    &.xl {
+        @include breakpoint(xl){
+            display: flex;
+        }
+        @include breakpoint(lg){
+            display: none;
+        }
+    }
+    &.lg {
+        @include breakpoint(lg){
+            display: flex;
+        }
+        @include breakpoint(md){
+            display: none;;
+        }
+    }
+    &.md {
+        @include breakpoint(md){
+            display: flex;
+        }
+        @include breakpoint(sm){
+            display: none;
+        }
+    }
+    &.sm {
+        @include breakpoint(sm){
+            display: flex;
+        }
+        @include breakpoint(xs){
+            display: none;
+        }
+    }
+    &.xs {
+        @include breakpoint(xs){
+            display: flex;
+        }
+    }
+
+    
+}

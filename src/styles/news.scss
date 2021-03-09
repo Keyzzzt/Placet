@@ -23,28 +23,52 @@
         flex-wrap: wrap;
         margin-right: -24px;
         .news__item{
-            max-width: 255px;
-            min-width: 382px;
+            max-width: 382px;
             box-shadow: 0px 12px 24px $news-card-shadow;
             border-radius: $border-radius;
             margin: 0 24px 24px 0;
             @include breakpoint(xl){
-                max-width: 411px;
+                max-width: 382px;
             }
             @include breakpoint(lg){
-                min-width: 272px;
-                max-width: 272px;
+                max-width: 411px;
+                &:nth-child(2){
+                    max-width: 410px;
+                }
+                &:nth-child(3n + 5){
+                    max-width: 410px;
+                }
             }
             @include breakpoint(md){
-                min-width: 338px;
+                max-width: 272px;
+                &:nth-child(2){
+                    max-width: 272px;
+                }
+                &:nth-child(3n + 5){
+                    max-width: 272px;
+                }
             }
+            @include breakpoint(sm){
+                max-width: 338px;
+                &:nth-child(2){
+                    max-width: 338px;
+                }
+                &:nth-child(3n + 5){
+                    max-width: 338px;
+                }
+            }
+            
+
+
+
+            /*
             @include breakpoint(sm){
                 min-width: 472px;
     
             } 
             @include breakpoint(xs){
                 min-width: 312px;
-            } 
+            } */
         
             &-bottom{
                 padding: 24px;
@@ -53,15 +77,13 @@
                 img {
                 border-top-left-radius: $border-radius;
                 border-top-right-radius: $border-radius;
-                @include breakpoint(xl){
-                    width: 100%;
+                @include breakpoint(lg){
+                    min-width: 100%;
                 }
                 @include breakpoint(md){
-                    min-width: 338px
+                    max-width: 100%;
                 }
-                @include breakpoint(xs){
-                    min-width: 312px;
-                } 
+
         
                 }
             }

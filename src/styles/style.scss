@@ -5,8 +5,7 @@
 @import "news.scss";
 @import "join.scss";
 @import "footer.scss";
-
-
+@import "temp.scss";
 
 @mixin roboto {
     font-family: 'Roboto', sans-serif;
@@ -19,10 +18,6 @@
     font-weight: $bold;
 }
 
-*, *:before, *:after{
-    box-sizing: border-box;
-}
-
 body {
     @include roboto;
     font-size: 16px;
@@ -32,20 +27,22 @@ body {
     margin: 0 24px;
 
 }
-    .container, .container-footer {
+.container, .container-footer {
         max-width: 1600px;
         margin: 0 auto;
-
-        @include breakpoint(xl){
-            max-width: 1281px;
-        }
         @include breakpoint(lg){
-            max-width: 864px;
+            max-width: 1280px;
         }
         @include breakpoint(md){
-            max-width: 700px;
+            max-width: 864px;
         }
         @include breakpoint(sm){
+            max-width: 700px;
+        } 
+        @include breakpoint(xs){
+            max-width: 472px;
+        } 
+        @include breakpoint(xxs){
             max-width: 472px;
         } 
     }
@@ -55,24 +52,16 @@ body {
         }
     }
 
-a {
-    text-decoration: none;
-    color: $main-grey; 
-}
-
-
 .lang{
     display: flex;
     align-items: center;
     cursor: pointer;
     position: relative;
-
-    @include breakpoint(lg){
+    @include breakpoint(md){
         .triangle--down--dark{
             border-top: 6px solid $main-grey;
         }
     }
-
     i{
         margin-right: 8px;
         @include breakpoint(xs){
@@ -84,18 +73,20 @@ a {
         margin-right: 20px;
         font-size: 14px;
         font-weight: $bold;
-        @include breakpoint(xs){
+        /*@include breakpoint(xs){
              color: $secondary-grey;  
              font-size: 20px;
              text-transform: none;
-        }
+        } */
 
     }
+
     &__top{
-        @include breakpoint(lg){
+        @include breakpoint(md){
             display: none;
         }
-    }
+            }
+
     &--bottom{
         padding: 11px;
         color: $main-dark;
@@ -103,20 +94,20 @@ a {
             display: flex;
             align-items: center;
         }
-        @include breakpoint(lg){
-            padding: 34px;
-            border-top: 1px solid $main-grey;
-            border-bottom: 1px solid $main-grey;
-            padding: 34px 0;
-            color: $main-grey;
-
-        }
         @include breakpoint(md){
+            padding: 34px;
+
+            padding: 34px 0;
+            color: $main-grey;        
+        }
+
+
+        @include breakpoint(sm){
             color: $main-grey;
         }
-        @include breakpoint(xs){
+       /* @include breakpoint(xs){
             border-bottom: none;
-        }
+        } */
     }
 }
 
@@ -142,10 +133,9 @@ a {
 }
 
 .triangle-down-dark{
-    @include breakpoint(lg){
+    @include breakpoint(md){
         left: 100px;
-    border-top: 6px solid $main-grey;
-
+        border-top: 6px solid $main-grey;
     }
     @include breakpoint(xs){
         border-top: 6px solid $secondary-grey;
@@ -154,9 +144,9 @@ a {
 }
 .triangle-up-dark{
     transform: rotate(180deg);
-    @include breakpoint(xs){
+    /*@include breakpoint(xs){
         border-top: 6px solid $secondary-grey;
-    }
+    }*/
 }
 .triangle-down-gray{
     border-top: 6px solid $main-grey;
@@ -172,7 +162,7 @@ a {
             margin-left: 26px;
         }
     }
-    @include breakpoint(xs){
+    /*@include breakpoint(xs){
         display: block;
-    }
+    }*/
 }
